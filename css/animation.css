@@ -1,0 +1,162 @@
+/*==============流体シェイプ(見出し)=================*/
+
+.fluidbox {
+  /* display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  align-items: flex-end; */
+}
+
+.fluid {
+  width: 45vh; /*横幅*/
+  height: 41vh; /*縦幅*/
+  /* background: #fff100; 背景色 */
+  background-color: rgb(176 224 230 / 30%);
+  animation: fluidrotate 10s ease 0s infinite; /*アニメーションの設定*/
+  /* margin-right: 228px; */
+  /* margin-right: min(35vw, 14em); */
+  position: absolute;
+  z-index: -99;
+  margin-top: 7em;
+}
+#sec2 > .fluid {
+  right: 0;
+}
+
+
+@keyframes fluidrotate {
+  0%,
+  100% {
+    border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+  }
+  14% {
+    border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+  }
+  28% {
+    border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+  }
+  42% {
+    border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+  }
+  56% {
+    border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+  }
+  70% {
+    border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+  }
+  84% {
+    border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+  }
+}
+
+/*モバイル版*/
+@media screen and (max-width: 767px) {
+  .fluid {
+    width: 30vh;
+    height: 26vh;
+    margin-top: -2em;
+  }
+}
+
+/* .fluid-title {
+  position: absolute;
+} */
+
+/*========= 流れるテキスト ===============*/
+
+/*全共通*/
+
+.slide-in {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.slide-in_inner {
+  display: inline-block;
+}
+
+/* 上下のアニメーション*/
+.upAnime {
+  opacity: 0; /* 事前に透過0 にして消しておく*/
+}
+
+.slideAnimeDownUp {
+  animation-name: slideTextY100;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes slideTextY100 {
+  from {
+    transform: translateY(100%); /* 要素を上の枠外に移動*/
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0); /* 要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+.slideAnimeUpDown {
+  animation-name: slideTextY-100;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes slideTextY-100 {
+  from {
+    transform: translateY(-100%); /* 要素を下の枠外に移動*/
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0); /* 要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+
+/*================テキスト回転(メイン画像)==========================*/
+.rollAnime.roll span {
+  transition-property: opacity, transform;
+  transform: rotateY(360deg);
+  transition: all 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  display: inline-block;
+}
+
+/*============ボーダーインライン===================*/
+#about .container {
+  background-color: powderblue;
+}
+
+.container {
+  width: 1000px;
+  max-width: 93%;
+  margin: 20px auto;
+  padding: 2px;
+  border-radius: 40px;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 8px powderblue;
+  box-sizing: border-box;
+}
+
+.comment .container {
+  margin-top: 150px;
+  padding-bottom: 80px;
+}
+
+/*=================滑らかに出現=======================*/
+span.smoothText {
+  overflow: hidden;
+  display: block;
+}
+
+/* アニメーションで傾斜がついている文字列を水平に戻す*/
+span.smoothTextTrigger {
+  transition: 0.8s ease-in-out;
+  transform: translate3d(0, 100%, 0) skewY(12deg);
+  transform-origin: left;
+  display: block;
+}
+span.smoothTextTrigger.smoothTextAppear {
+  transform: translate3d(0, 0, 0) skewY(0);
+}

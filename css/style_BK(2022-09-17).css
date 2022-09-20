@@ -1,0 +1,474 @@
+@charset "UTF-8";
+
+/*共通部分*/
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.7;
+  color: #432;
+  /* padding-top: 90px; */
+}
+
+a {
+  text-decoration: none;
+  /* display: block; */
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 4%;
+  width: 100%;
+}
+
+
+
+/*見出し*/
+.title {
+  font-family: "Arial";
+  font-size: 70px;
+  color: #432;
+  text-align: center;
+  padding: 5em 0;
+  letter-spacing: 0.1em;
+}
+
+.page-title {
+  font-family: "Arial";
+  color: #707070;
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 0.1em;
+  padding-top: 100px;
+}
+
+.page-subtitle {
+  text-align: center;
+  font-size: 20px;
+  color: #707070;
+}
+
+/*ボタン*/
+.button {
+  font-family: "Arial";
+  font-size: 20px;
+  background: gold;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 18px 32px;
+}
+
+.button:hover {
+  background: #f0f17e;
+}
+
+/*フレックス*/
+.flex {
+  display: flex;
+}
+
+/*HEADER
+-----------------------------------*/
+.logo {
+  width: 300px;
+  margin-top: 10px;
+}
+
+.main-nav {
+  font-family: "Arial";
+  display: flex;
+  font-size: 25px;
+  margin-top: 25px;
+  list-style: none;
+}
+
+.main-nav li {
+  margin-right: 80px;
+}
+
+.main-nav a {
+  color: #432;
+  letter-spacing: 0.1em;
+}
+
+.main-nav a:hover {
+  color: #febc02;
+}
+
+.page-header {
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(241, 249, 185, 0.8);
+  position: fixed;
+  /* top: 0;
+  left: 0; */
+  z-index: 1;
+}
+
+/*HOME
+--------------------------*/
+.big-bg {
+  background-image: url(../img/main.png);
+  min-height: 100vh;
+}
+.big-bg {
+  background-size: cover;
+  background-position: center top;
+}
+
+/*-----home-works*/
+.tab-nav {
+  font-family: "Arial";
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  display: block;
+  margin: 10px;
+  padding: 10px 25px;
+  color: #432;
+}
+
+button:hover {
+  color: #febc02;
+}
+
+.grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.grid div {
+  margin: auto;
+}
+
+.grid p {
+  text-align: center;
+}
+
+/*-----home-bout*/
+.homeabout-left {
+  flex: 1;
+  margin: 40px;
+}
+
+.homeabout-right {
+  flex: 1.5;
+  margin: auto 30px;
+}
+
+.next {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/*フッター*/
+footer {
+  background: rgba(241, 249, 185, 0.8);
+  text-align: center;
+  padding: 26px 0;
+}
+
+footer p {
+  color: #432;
+  font-family: "Arial";
+  font-size: 20px;
+}
+
+/*ABOUT
+--------------------------------------*/
+#about .homeabout-left {
+  margin: auto 40px;
+}
+
+/*-----about-skill*/
+.skill {
+  text-decoration: none;
+  font-family: "Arial";
+  font-size: 20px;
+  padding: 40px;
+  color: #ffffff;
+}
+
+.skill ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.skill li {
+  padding-right: 15px;
+}
+
+#about .flex {
+  justify-content: space-evenly;
+  margin: 30px;
+}
+
+.leftright {
+  width: 330px;
+  padding: 15px;
+}
+
+.leftright h3 {
+  text-align: center;
+  margin: 15px 0;
+}
+
+/*-----about-career*/
+.career {
+  margin-bottom: 80px;
+}
+
+.career-flex {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.career-flexInner-left {
+  width: 15%;
+  padding-top: 35px;
+  font-size: 18px;
+}
+
+.career-flexInner-right {
+  width: 85%;
+  padding-top: 35px;
+  font-size: 15px;
+}
+
+dl {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+dt {
+  display: block;
+}
+
+dd {
+  display: block;
+  margin-inline-start: 40px;
+}
+
+.career-text {
+  font-weight: bold;
+}
+
+/*WORKS
+----------------------------------*/
+.works-subtitle {
+  font-family: "Arial";
+  text-align: center;
+  color: #432;
+  padding: 30px 0;
+}
+
+.works-flex {
+  display: flex;
+  padding: 40px;
+  justify-content: space-evenly;
+}
+
+.works-flex ul {
+  list-style: none;
+}
+
+.works-flex li {
+  padding-bottom: 10px;
+}
+
+#works h2 {
+  text-align: center;
+  color: #707070;
+}
+
+#works h3 {
+  margin: 40px 20px 10px 0;
+}
+
+.comment p {
+  padding-left: 20px;
+}
+
+.oder {
+  padding: 70px 0 30px 0;
+}
+
+/*LP
+----------------------------*/
+.image li {
+  text-align: center;
+  list-style: none;
+}
+
+.image-text {
+  font-size: larger;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+/*BANNER
+----------------------------*/
+.banner .works-flex {
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+}
+
+.banner .works-flex ul {
+  margin-left: 20px;
+  background-color: #fdf7f3;
+  padding: 20px 20px 10px;
+}
+
+#product .grid {
+  gap: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+#product .grid p {
+  margin: 25px;
+}
+
+#product h4 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/*半透明の背景部分*/
+#bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(247, 245, 245, 0.8);
+}
+
+/*拡大写真部分*/
+#photo {
+  position: fixed;
+  right: 20%;
+  left: 20%;
+  top: 50%;
+  bottom: 50%;
+  margin: auto;
+  height: 500px;
+  width: 500px;
+}
+
+/*pcの時だけ版--------------------------------*/
+@media screen and (min-width: 768px) {
+
+}
+
+
+/*モバイル版--------------------------------*/
+@media screen and (max-width: 767px) {
+  body {
+    /* padding-top: 155px; */
+  }
+
+  .page-title {
+    padding-top: 150px;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /*HEADER
+  ---------------------------------*/
+  .main-nav {
+    margin: 0 0 20px;
+  }
+
+  .main-nav li {
+    margin: 0 20px;
+  }
+
+  /*-----home-about*/
+  .homeabout-right p {
+    font-size: 12px;
+  }
+
+  .homeabout-right {
+    margin: 0;
+  }
+
+  /*ABOUT
+  ----------------------------------*/
+  #about .flex {
+    display: block;
+  }
+
+  /*スキル*/
+  .leftright {
+    margin: auto;
+  }
+
+  .next {
+    margin: 20px 0;
+  }
+
+  /*WORKS
+  ---------------------------------*/
+  .works-flex div {
+    padding-left: 20px;
+  }
+
+  /*WEB-----------------*/
+  .lisize li {
+    font-size: 13px;
+  }
+
+  /*WEB_4-------------*/
+  .web4 .works-flex {
+    padding: 40px 3px 0;
+  }
+
+  .web4size li {
+    font-size: 10px;
+  }
+
+  /*BANNER
+  -----------------------------*/
+  .banner .works-flex {
+    display: block;
+  }
+
+  .banner .works-flex ul {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  #photo img {
+    width: 400px;
+    height: 400px;
+  }
+
+  #photo {
+    left: 2%;
+    width: 400px;
+    height: 400px;
+  }
+}
